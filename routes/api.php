@@ -21,6 +21,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 
 Route::prefix('/post')->group(function () {
-    Route::get('/', [PostController::class, 'allCachedPost']);
-    Route::get('/', [PostController::class, 'allPostWithoutCache']);
+    Route::get('/cache', [PostController::class, 'allCachedPost']);
+    Route::get('/without/cache', [PostController::class, 'allPostWithoutCache']);
 });
